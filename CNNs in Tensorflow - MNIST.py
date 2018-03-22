@@ -55,8 +55,8 @@ def conv_net(x, weights, biases, dropout):
 	# Layer 3 : 7*7*64 -> 1024
 	fc1 = tf.reshape(conv2, [-1, weights['wd1'].get_shape().as_list()[0]])
 	fc1 = tf.add(tf.matmul(fc1, weights['wd1']), biases['bd1'])
-    fc1 = tf.nn.relu(fc1)
-    fc1 = tf.nn.dropout(fc1, dropout) 
+    	fc1 = tf.nn.relu(fc1)
+    	fc1 = tf.nn.dropout(fc1, dropout) 
 
 	# Output layer : 1024 -> 10 
 	out = tf.add(tf.matmul(fc1, weights['out'], biases['out']))
