@@ -93,19 +93,3 @@ with tf.Session as sess:
     # Calculate Test Accuracy
     test_acc = sess.run(accuracy, feed_dict={ x: mnist.test.images[:test_valid_size], y: mnist.test.labels[:test_valid_size], prob: 1.})
     print('Testing Accuracy: {}'.format(test_acc))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
